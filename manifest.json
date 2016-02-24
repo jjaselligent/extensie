@@ -1,0 +1,25 @@
+{
+    "name": "Selligent tools",
+    "version": "1.0",
+    "icons": {
+        "48": "icon.png"   
+    },
+    "description": "Life shouldn't be this hard",
+    "content_scripts": [{
+        "matches": [ "https://connect.selligent.com/*" ],
+        "js": [ "popup.js","jquery.js","ics.js"],
+        "run_at": "document_start" 
+    }],
+    "permissions": [
+        "https://connect.selligent.com/*",
+        "https://aca.emsecure.net/restapi/*"
+    ],
+    "web_accessible_resources": [
+        "https://aca.emsecure.net/restapi/*"
+    ],
+    "browser_action": {
+        "default_icon": "favicon.png",
+        "default_popup": "popup.html"
+      },
+    "manifest_version": 2
+}
